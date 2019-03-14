@@ -1,11 +1,13 @@
 FROM python:latest
 
-# Set the application directory
+WORKDIR /
 
-# Install our requirements
+ADD requirements.txt requirements.txt
 
-# Copy our code from the current folder to /app inside the container
+RUN pip install -r requirements.txt
 
-# Make port 3000 available
+ADD app.py app.py
 
-# Define our command to be run when launching the container
+EXPOSE 3000
+
+CMD ["python", "app.py"]

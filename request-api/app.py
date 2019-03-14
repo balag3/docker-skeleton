@@ -15,6 +15,15 @@ class Quote(Resource):
             return {'value': value}
 
 
+class Welcome(Resource):
+    def get(self):
+        return "Welcome! " \
+               "Api usage: http://my-api-url/<search-term> will return a Chuck Norris quote " \
+               "containing the phrase if it exist! " \
+               "Response format : {'value' : 'quote'}"
+
+
+api.add_resource(Welcome, '/')
 api.add_resource(Quote, '/<string:word>')
 
 if __name__ == '__main__':
