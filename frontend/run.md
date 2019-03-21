@@ -1,1 +1,1 @@
-docker run --net=my_isolated_bridge_network -e BACKEND_HOST=backend -p 4000:4000 -d frontend:latest
+docker run --net=my_isolated_bridge_network -e BACKEND_HOST=backend -p 4000:4000 -d --name=frontend frontend:latest
