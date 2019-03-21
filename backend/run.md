@@ -1,0 +1,1 @@
+docker run -p 8080:8080 --net=my_isolated_bridge_network -e spring.datasource.url=jdbc:postgresql://database:5432/postgres -e api.host=api --name=backend --hostname=backend -d backend:latest
