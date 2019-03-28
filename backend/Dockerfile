@@ -1,4 +1,4 @@
-FROM java:8
+FROM openjdk:8-jre
 WORKDIR /
 ADD target/demo*.jar demo.jar
 EXPOSE 8080
